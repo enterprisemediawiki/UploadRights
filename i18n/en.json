@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"James Montalvo"
+		]
+	},
+	"uploadrights-desc": "Allow specifying different upload rights for super users",
+	"right-superupload": "Have expanded upload permissions"
+}

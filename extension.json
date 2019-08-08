@@ -1,0 +1,43 @@
+{
+	"name": "UploadRights",
+	"version": "0.0.1-alpha",
+	"author": [
+		"James Montalvo"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:UploadRights",
+	"descriptionmsg": "uploadrights-desc",
+	"license-name": "MIT",
+	"type": "hook",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"superupload": true
+		},
+		"*": {
+			"superupload": false
+		}
+	},
+	"AvailableRights": [
+		"superupload"
+	],
+	"MessagesDirs": {
+		"UploadRights": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"UploadRightsHooks": "includes/UploadRightsHooks.php"
+	},
+	"Hooks": {
+		"BeforeInitialize": [
+			"UploadRightsHooks::updateLinksAfterEdit"
+		]
+	},
+	"config": {
+		"SuperUploaderFileExtensions": [],
+		"SuperUploaderMaxUploadSize": false
+	},
+	"manifest_version": 1
+}
