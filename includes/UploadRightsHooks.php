@@ -10,7 +10,7 @@
  *
  * @author James Montalvo
  */
-class ApprovedRevsHooks {
+class UploadRightsHooks {
 
 	public static function onBeforeInitialize( Title &$title, Article &$article = null, OutputPage &$output, User &$user ) {
 
